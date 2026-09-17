@@ -1,0 +1,5971 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Emanuel Farma - Botica, productos de salud, cuidado personal y compras empresariales."
+    >
+
+    <meta
+        name="theme-color"
+        content="#a4133c"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <title>
+        Emanuel Farma | Tu botica de confianza
+    </title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="./styles.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     1. PANTALLA DE CARGA
+========================================================= -->
+
+<div
+    id="pantallaCarga"
+    class="pantalla-carga"
+>
+
+    <div class="carga-contenido">
+
+        <div class="carga-logo">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+        </div>
+
+        <h1>
+            Emanuel Farma
+        </h1>
+
+        <p id="textoCarga">
+            Preparando tu experiencia...
+        </p>
+
+        <div class="barra-carga">
+
+            <div
+                id="progresoCarga"
+                class="barra-carga-progreso"
+            ></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     2. OVERLAY GENERAL
+========================================================= -->
+
+<div
+    id="overlayGeneral"
+    class="overlay-general"
+    hidden
+></div>
+
+
+
+<!-- =========================================================
+     3. NOTIFICACIONES
+========================================================= -->
+
+<div
+    id="contenedorNotificaciones"
+    class="contenedor-notificaciones"
+    aria-live="polite"
+    aria-atomic="true"
+></div>
+
+
+
+<!-- =========================================================
+     4. PANTALLA DE BIENVENIDA
+========================================================= -->
+
+<section
+    id="pantallaBienvenida"
+    class="pantalla-bienvenida"
+    hidden
+>
+
+    <div class="bienvenida-panel">
+
+        <div class="bienvenida-marca">
+
+            <div class="logo-grande">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+            <span>
+                EMANUEL FARMA
+            </span>
+
+        </div>
+
+
+        <span class="bienvenida-etiqueta">
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            Una nueva experiencia digital
+
+        </span>
+
+
+        <h1>
+            Bienvenido a una nueva forma
+            de cuidar tu salud
+        </h1>
+
+
+        <p>
+            Compra como cliente, solicita precios
+            empresariales o administra tu negocio
+            desde una sola plataforma.
+        </p>
+
+
+        <!-- =================================================
+             TIPOS DE INGRESO
+        ================================================== -->
+
+        <div class="selector-tipo-ingreso">
+
+
+            <!-- CLIENTE -->
+
+            <button
+                id="btnIngresoCliente"
+                class="tarjeta-ingreso"
+                data-tipo-ingreso="cliente"
+                type="button"
+            >
+
+                <div class="tarjeta-ingreso-icono">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                </div>
+
+                <strong>
+                    Soy cliente
+                </strong>
+
+                <span>
+                    Comprar productos, guardar favoritos
+                    y administrar mis pedidos.
+                </span>
+
+                <small>
+                    Entrar a la tienda
+                    <i class="fa-solid fa-arrow-right"></i>
+                </small>
+
+            </button>
+
+
+
+            <!-- EMPRESA -->
+
+            <button
+                id="btnIngresoEmpresa"
+                class="tarjeta-ingreso"
+                data-tipo-ingreso="empresa"
+                type="button"
+            >
+
+                <div class="tarjeta-ingreso-icono">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+                <strong>
+                    Empresa / Mayorista
+                </strong>
+
+                <span>
+                    Cotizaciones, stock y compras
+                    por volumen.
+                </span>
+
+                <small>
+                    Portal empresarial
+                    <i class="fa-solid fa-arrow-right"></i>
+                </small>
+
+            </button>
+
+
+
+            <!-- VENDEDOR -->
+
+            <button
+                id="btnIngresoVendedor"
+                class="tarjeta-ingreso"
+                data-tipo-ingreso="vendedor"
+                type="button"
+            >
+
+                <div class="tarjeta-ingreso-icono">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <strong>
+                    Vendedor
+                </strong>
+
+                <span>
+                    Inventario, productos, pedidos,
+                    clientes y estadísticas.
+                </span>
+
+                <small>
+                    Acceso autorizado
+                    <i class="fa-solid fa-lock"></i>
+                </small>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ACCIONES
+        ================================================== -->
+
+        <div class="bienvenida-acciones">
+
+            <button
+                id="btnBienvenidaLogin"
+                class="btn-principal"
+                type="button"
+            >
+
+                <i class="fa-solid fa-user"></i>
+
+                Iniciar sesión
+
+            </button>
+
+
+            <button
+                id="btnCrearCuenta"
+                class="btn-secundario"
+                type="button"
+            >
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Crear cuenta
+
+            </button>
+
+
+            <button
+                id="btnContinuarInvitado"
+                class="btn-texto"
+                type="button"
+            >
+
+                Continuar como invitado
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="bienvenida-seguridad">
+
+            <span>
+
+                <i class="fa-solid fa-lock"></i>
+
+                Compra segura
+
+            </span>
+
+            <span>
+
+                <i class="fa-solid fa-store"></i>
+
+                Recojo en botica
+
+            </span>
+
+            <span>
+
+                <i class="fa-solid fa-headset"></i>
+
+                Atención personalizada
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     5. PANTALLA DE AUTENTICACIÓN
+
+     IMPORTANTE:
+     Esta pantalla REEMPLAZARÁ la bienvenida.
+     No será un popup encima.
+========================================================= -->
+
+<section
+    id="modalAutenticacion"
+    class="modal pantalla-autenticacion"
+    hidden
+>
+
+    <div class="modal-contenido auth-contenido">
+
+
+        <!-- VOLVER -->
+
+        <button
+            id="btnVolverBienvenida"
+            class="btn-volver-auth"
+            type="button"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Volver
+
+        </button>
+
+
+
+        <!-- LOGO -->
+
+        <div class="auth-logo">
+
+            <div class="auth-logo-icono">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+            <div>
+
+                <strong>
+                    Emanuel Farma
+                </strong>
+
+                <span>
+                    Tu botica digital
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MENSAJE VENDEDOR -->
+
+        <div
+            id="avisoVendedorAuth"
+            class="aviso-vendedor-auth"
+            hidden
+        >
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+
+                <strong>
+                    Acceso para vendedores
+                </strong>
+
+                <span>
+                    Ingresa con una cuenta autorizada
+                    de vendedor o administrador.
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TABS -->
+
+        <div
+            id="tabsAutenticacion"
+            class="auth-tabs"
+        >
+
+            <button
+                id="tabLogin"
+                class="auth-tab activo"
+                data-auth="login"
+                type="button"
+            >
+
+                Iniciar sesión
+
+            </button>
+
+
+            <button
+                id="tabRegistro"
+                class="auth-tab"
+                data-auth="registro"
+                type="button"
+            >
+
+                Crear cuenta
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             LOGIN
+        ================================================== -->
+
+        <form
+            id="formLogin"
+            class="auth-form"
+        >
+
+            <div class="auth-encabezado">
+
+                <h2>
+                    Bienvenido nuevamente
+                </h2>
+
+                <p>
+                    Ingresa a tu cuenta de Emanuel Farma.
+                </p>
+
+            </div>
+
+
+            <label>
+
+                Correo electrónico
+
+                <div class="campo-icono">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        id="loginCorreo"
+                        name="correo"
+                        type="email"
+                        placeholder="correo@ejemplo.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+            </label>
+
+
+            <label>
+
+                Contraseña
+
+                <div class="campo-password">
+
+                    <div class="campo-icono">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            id="loginPassword"
+                            name="password"
+                            type="password"
+                            placeholder="Tu contraseña"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        class="mostrar-password"
+                        data-password-target="loginPassword"
+                        type="button"
+                        aria-label="Mostrar contraseña"
+                    >
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </label>
+
+
+
+            <div class="auth-opciones">
+
+                <label class="check-linea">
+
+                    <input
+                        id="recordarSesion"
+                        type="checkbox"
+                    >
+
+                    <span>
+                        Recordarme
+                    </span>
+
+                </label>
+
+
+                <button
+                    id="btnRecuperarPassword"
+                    class="btn-enlace"
+                    type="button"
+                >
+
+                    ¿Olvidaste tu contraseña?
+
+                </button>
+
+            </div>
+
+
+
+            <button
+                id="btnLoginSubmit"
+                class="btn-principal btn-ancho"
+                type="submit"
+            >
+
+                <i class="fa-solid fa-right-to-bracket"></i>
+
+                Iniciar sesión
+
+            </button>
+
+
+
+            <div class="separador-auth">
+
+                <span>
+                    o continúa con
+                </span>
+
+            </div>
+
+
+
+            <button
+                id="btnGoogleLogin"
+                class="btn-google"
+                type="button"
+            >
+
+                <i class="fa-brands fa-google"></i>
+
+                Continuar con Google
+
+            </button>
+
+
+
+            <p class="auth-cambio">
+
+                ¿Aún no tienes una cuenta?
+
+                <button
+                    type="button"
+                    data-ir-registro
+                >
+
+                    Crear cuenta
+
+                </button>
+
+            </p>
+
+        </form>
+
+
+
+        <!-- =================================================
+             REGISTRO
+        ================================================== -->
+
+        <form
+            id="formRegistro"
+            class="auth-form"
+            hidden
+        >
+
+            <div class="auth-encabezado">
+
+                <h2>
+                    Crea tu cuenta
+                </h2>
+
+                <p>
+                    Regístrate para comprar, guardar favoritos
+                    y consultar tus pedidos.
+                </p>
+
+            </div>
+
+
+            <div class="form-grid-dos">
+
+
+                <label>
+
+                    Nombres
+
+                    <input
+                        id="registroNombre"
+                        name="nombre"
+                        type="text"
+                        placeholder="Tus nombres"
+                        autocomplete="given-name"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Apellidos
+
+                    <input
+                        id="registroApellido"
+                        name="apellido"
+                        type="text"
+                        placeholder="Tus apellidos"
+                        autocomplete="family-name"
+                    >
+
+                </label>
+
+            </div>
+
+
+
+            <label>
+
+                Correo electrónico
+
+                <input
+                    id="registroCorreo"
+                    name="correo"
+                    type="email"
+                    placeholder="correo@ejemplo.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </label>
+
+
+
+            <label>
+
+                Teléfono
+
+                <input
+                    id="registroTelefono"
+                    name="telefono"
+                    type="tel"
+                    placeholder="987 654 321"
+                    autocomplete="tel"
+                >
+
+            </label>
+
+
+
+            <label>
+
+                Contraseña
+
+                <div class="campo-password">
+
+                    <input
+                        id="registroPassword"
+                        name="password"
+                        type="password"
+                        placeholder="Crea una contraseña"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                    <button
+                        class="mostrar-password"
+                        data-password-target="registroPassword"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </button>
+
+                </div>
+
+            </label>
+
+
+
+            <label class="check-linea">
+
+                <input
+                    id="aceptarTerminos"
+                    type="checkbox"
+                    required
+                >
+
+                <span>
+
+                    Acepto los términos, condiciones
+                    y política de privacidad.
+
+                </span>
+
+            </label>
+
+
+
+            <button
+                id="btnRegistroSubmit"
+                class="btn-principal btn-ancho"
+                type="submit"
+            >
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                Crear mi cuenta
+
+            </button>
+
+
+
+            <p class="auth-cambio">
+
+                ¿Ya tienes una cuenta?
+
+                <button
+                    type="button"
+                    data-ir-login
+                >
+
+                    Iniciar sesión
+
+                </button>
+
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     6. HEADER PRINCIPAL
+========================================================= -->
+
+<header
+    id="headerPrincipal"
+    class="header-principal"
+>
+
+
+    <!-- =====================================================
+         TOPBAR
+    ====================================================== -->
+
+    <div class="topbar">
+
+        <div class="contenedor topbar-contenido">
+
+            <div class="topbar-izquierda">
+
+                <span>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Jr. San Martin s/n
+
+                </span>
+
+
+                <span>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Lun - Sáb: 06:00 - 22:00
+
+                </span>
+
+            </div>
+
+
+            <div class="topbar-derecha">
+
+                <button
+                    id="selectorIdioma"
+                    class="topbar-boton"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    ES
+
+                </button>
+
+
+                <button
+                    id="btnTema"
+                    class="topbar-boton"
+                    data-cambiar-tema
+                    type="button"
+                    aria-label="Cambiar tema"
+                >
+
+                    <i
+                        class="fa-solid fa-moon"
+                        data-icono-tema
+                    ></i>
+
+                </button>
+
+
+                <a
+                    href="tel:+51987456389"
+                    class="topbar-boton"
+                >
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    987 456 389
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER CENTRAL
+    ====================================================== -->
+
+    <div class="header-central">
+
+        <div class="contenedor header-central-contenido">
+
+
+            <!-- LOGO -->
+
+            <button
+                id="btnLogoInicio"
+                class="logo-principal"
+                type="button"
+            >
+
+                <span class="logo-icono">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </span>
+
+                <span class="logo-texto">
+
+                    <strong>
+                        Emanuel
+                    </strong>
+
+                    <small>
+                        FARMA
+                    </small>
+
+                </span>
+
+            </button>
+
+
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador-principal">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    id="buscadorGlobal"
+                    type="search"
+                    placeholder="Buscar productos, marcas o categorías..."
+                    autocomplete="off"
+                    data-i18n-placeholder="buscar"
+                >
+
+                <button
+                    id="btnBuscarGlobal"
+                    type="button"
+                >
+
+                    Buscar
+
+                </button>
+
+
+                <div
+                    id="sugerenciasBusqueda"
+                    class="sugerencias-busqueda"
+                    hidden
+                ></div>
+
+            </div>
+
+
+
+            <!-- ACCIONES -->
+
+            <div class="header-acciones">
+
+
+                <button
+                    id="btnPedidos"
+                    class="header-accion"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <span>
+                        Pedidos
+                    </span>
+
+                </button>
+
+
+                <button
+                    id="btnFavoritos"
+                    class="header-accion"
+                    type="button"
+                >
+
+                    <span class="icono-contador">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                        <small
+                            id="contadorFavoritos"
+                        >
+                            0
+                        </small>
+
+                    </span>
+
+                    <span>
+                        Favoritos
+                    </span>
+
+                </button>
+
+
+                <button
+                    id="btnCuenta"
+                    class="header-accion"
+                    type="button"
+                >
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span
+                        id="textoCuenta"
+                    >
+                        Mi cuenta
+                    </span>
+
+                </button>
+
+
+                <button
+                    id="btnCarrito"
+                    class="header-accion carrito-header"
+                    type="button"
+                >
+
+                    <span class="icono-contador">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <small
+                            id="contadorCarrito"
+                        >
+                            0
+                        </small>
+
+                    </span>
+
+                    <span>
+                        Carrito
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         NAVEGACIÓN
+    ====================================================== -->
+
+    <nav class="navegacion-principal">
+
+        <div class="contenedor navegacion-contenido">
+
+
+            <button
+                id="btnCategorias"
+                class="btn-categorias"
+                type="button"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+                Categorías
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div class="nav-enlaces">
+
+                <button
+                    type="button"
+                    data-nav="inicio"
+                >
+                    Inicio
+                </button>
+
+                <button
+                    type="button"
+                    data-nav="productos"
+                >
+                    Productos
+                </button>
+
+                <button
+                    type="button"
+                    data-nav="ofertas"
+                >
+                    Ofertas
+                </button>
+
+                <button
+                    type="button"
+                    data-nav="marcas"
+                >
+                    Marcas
+                </button>
+
+                <button
+                    type="button"
+                    data-nav="empresas"
+                >
+                    Empresas
+                </button>
+
+                <button
+                    type="button"
+                    data-nav="vendedor"
+                >
+                    Vendedor
+                </button>
+
+            </div>
+
+
+            <button
+                id="btnMenuMovil"
+                class="btn-menu-movil"
+                type="button"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         MENÚ DE CATEGORÍAS
+    ====================================================== -->
+
+    <div
+        id="menuCategorias"
+        class="menu-categorias"
+        hidden
+    >
+
+        <div class="contenedor">
+
+            <div
+                id="listaMenuCategorias"
+                class="lista-menu-categorias"
+            ></div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     7. PORTAL CLIENTE
+========================================================= -->
+
+<main
+    id="portalCliente"
+    class="portal portal-cliente"
+>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+        id="inicio"
+        class="hero-principal"
+    >
+
+        <div class="contenedor hero-grid">
+
+
+            <div class="hero-contenido">
+
+                <span class="hero-etiqueta">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                    Emanuel Farma
+
+                </span>
+
+
+                <h1>
+                    Todo lo que necesitas,
+                    más cerca de ti
+                </h1>
+
+
+                <p>
+                    Encuentra productos de salud,
+                    cuidado personal, higiene,
+                    bienestar y mucho más.
+                </p>
+
+
+                <div class="hero-buscador">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        id="buscadorHero"
+                        type="search"
+                        placeholder="¿Qué estás buscando?"
+                        autocomplete="off"
+                    >
+
+                    <button
+                        id="btnBuscarHero"
+                        class="btn-principal"
+                        type="button"
+                    >
+
+                        Buscar
+
+                    </button>
+
+                </div>
+
+
+                <div class="hero-acciones">
+
+                    <button
+                        class="btn-principal"
+                        data-scroll-productos
+                        type="button"
+                    >
+
+                        Ver productos
+
+                    </button>
+
+
+                    <button
+                        class="btn-secundario"
+                        data-abrir-pedido-inteligente
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        Pedido Inteligente
+
+                    </button>
+
+                </div>
+
+
+                <div class="hero-datos">
+
+                    <span>
+
+                        <strong>
+                            Miles
+                        </strong>
+
+                        de productos
+
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            Compra
+                        </strong>
+
+                        rápida
+
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            Recojo
+                        </strong>
+
+                        en botica
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-visual">
+
+                <div class="hero-tarjeta hero-tarjeta-principal">
+
+                    <div class="hero-tarjeta-icono">
+
+                        <i class="fa-solid fa-pills"></i>
+
+                    </div>
+
+                    <span>
+                        Encuentra lo que necesitas
+                    </span>
+
+                    <strong>
+                        Compra fácil y rápida
+                    </strong>
+
+                </div>
+
+
+                <div class="hero-mini-card card-uno">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <span>
+                        Cuidado y bienestar
+                    </span>
+
+                </div>
+
+
+                <div class="hero-mini-card card-dos">
+
+                    <i class="fa-solid fa-percent"></i>
+
+                    <span>
+                        Ofertas especiales
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BENEFICIOS
+    ====================================================== -->
+
+    <section class="beneficios-rapidos">
+
+        <div class="contenedor beneficios-grid">
+
+
+            <article>
+
+                <i class="fa-solid fa-store"></i>
+
+                <div>
+
+                    <strong>
+                        Recojo en botica
+                    </strong>
+
+                    <span>
+                        Compra en línea y recoge en tienda.
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <i class="fa-solid fa-tags"></i>
+
+                <div>
+
+                    <strong>
+                        Ofertas
+                    </strong>
+
+                    <span>
+                        Encuentra precios especiales.
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <div>
+
+                    <strong>
+                        Stock actualizado
+                    </strong>
+
+                    <span>
+                        Consulta disponibilidad.
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <i class="fa-solid fa-headset"></i>
+
+                <div>
+
+                    <strong>
+                        Atención
+                    </strong>
+
+                    <span>
+                        Estamos para ayudarte.
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CATEGORÍAS
+    ====================================================== -->
+
+    <section
+        id="seccionCategorias"
+        class="seccion seccion-categorias"
+    >
+
+        <div class="contenedor">
+
+            <div class="encabezado-seccion">
+
+                <div>
+
+                    <span class="subtitulo-seccion">
+                        Explora
+                    </span>
+
+                    <h2>
+                        Categorías
+                    </h2>
+
+                    <p>
+                        Encuentra rápidamente lo que necesitas.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="btnVerTodasCategorias"
+                    class="btn-enlace"
+                    type="button"
+                >
+
+                    Ver todas
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="gridCategorias"
+                class="grid-categorias"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OFERTAS
+    ====================================================== -->
+
+    <section
+        id="seccionOfertas"
+        class="seccion seccion-ofertas"
+    >
+
+        <div class="contenedor">
+
+
+            <div class="encabezado-seccion">
+
+                <div>
+
+                    <span class="subtitulo-seccion">
+                        Ahorra más
+                    </span>
+
+                    <h2>
+                        Ofertas destacadas
+                    </h2>
+
+                </div>
+
+
+                <div class="contador-oferta">
+
+                    <span>
+                        Termina en
+                    </span>
+
+                    <strong
+                        id="contadorOferta"
+                    >
+                        00:00:00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="productosOferta"
+                class="productos-grid"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CATÁLOGO PRINCIPAL
+    ====================================================== -->
+
+    <section
+        id="seccionProductos"
+        class="seccion seccion-productos"
+    >
+
+        <div class="contenedor">
+
+
+            <div class="encabezado-seccion">
+
+                <div>
+
+                    <span class="subtitulo-seccion">
+                        Catálogo
+                    </span>
+
+                    <h2>
+                        Todos nuestros productos
+                    </h2>
+
+                    <p
+                        id="textoResultados"
+                    >
+                        Explora nuestro catálogo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FILTROS -->
+
+            <div class="barra-catalogo">
+
+
+                <div class="catalogo-tabs">
+
+                    <button
+                        class="catalogo-tab activo"
+                        data-tab-productos="todos"
+                        type="button"
+                    >
+                        Todos
+                    </button>
+
+                    <button
+                        class="catalogo-tab"
+                        data-tab-productos="destacados"
+                        type="button"
+                    >
+                        Destacados
+                    </button>
+
+                    <button
+                        class="catalogo-tab"
+                        data-tab-productos="nuevos"
+                        type="button"
+                    >
+                        Nuevos
+                    </button>
+
+                    <button
+                        class="catalogo-tab"
+                        data-tab-productos="ofertas"
+                        type="button"
+                    >
+                        Ofertas
+                    </button>
+
+                </div>
+
+
+
+                <div class="catalogo-controles">
+
+                    <select
+                        id="filtroCategoria"
+                    >
+
+                        <option value="">
+                            Todas las categorías
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="filtroMarca"
+                    >
+
+                        <option value="">
+                            Todas las marcas
+                        </option>
+
+                    </select>
+
+
+                    <select
+                        id="ordenProductos"
+                    >
+
+                        <option value="relevancia">
+                            Relevancia
+                        </option>
+
+                        <option value="precio-asc">
+                            Menor precio
+                        </option>
+
+                        <option value="precio-desc">
+                            Mayor precio
+                        </option>
+
+                        <option value="nombre">
+                            Nombre A-Z
+                        </option>
+
+                    </select>
+
+
+                    <div class="selector-vista">
+
+                        <button
+                            id="btnVistaGrid"
+                            class="activo"
+                            type="button"
+                            aria-label="Vista cuadrícula"
+                        >
+
+                            <i class="fa-solid fa-grip"></i>
+
+                        </button>
+
+
+                        <button
+                            id="btnVistaLista"
+                            type="button"
+                            aria-label="Vista lista"
+                        >
+
+                            <i class="fa-solid fa-list"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCTOS -->
+
+            <div
+                id="contenedorProductos"
+                class="productos-grid"
+            ></div>
+
+
+
+            <!-- PAGINACIÓN -->
+
+            <div
+                id="paginacionProductos"
+                class="paginacion"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RECOMENDACIONES
+    ====================================================== -->
+
+    <section
+        id="seccionRecomendados"
+        class="seccion"
+    >
+
+        <div class="contenedor">
+
+            <div class="encabezado-seccion">
+
+                <div>
+
+                    <span class="subtitulo-seccion">
+                        Para ti
+                    </span>
+
+                    <h2>
+                        También te puede interesar
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="productosRecomendados"
+                class="productos-grid productos-grid-compacto"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VISTOS RECIENTEMENTE
+    ====================================================== -->
+
+    <section
+        id="seccionRecientes"
+        class="seccion"
+        hidden
+    >
+
+        <div class="contenedor">
+
+            <div class="encabezado-seccion">
+
+                <h2>
+                    Vistos recientemente
+                </h2>
+
+            </div>
+
+
+            <div
+                id="productosRecientes"
+                class="productos-grid productos-grid-compacto"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    
+
+   
+
+
+    <!-- =====================================================
+         MARCAS
+    ====================================================== -->
+
+    <section
+        id="seccionMarcas"
+        class="seccion"
+    >
+
+        <div class="contenedor">
+
+            <div class="encabezado-seccion">
+
+                <div>
+
+                    <span class="subtitulo-seccion">
+                        Explora
+                    </span>
+
+                    <h2>
+                        Marcas
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="gridMarcas"
+                class="grid-marcas"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter">
+
+        <div class="contenedor newsletter-contenido">
+
+
+            <div>
+
+                <i class="fa-solid fa-envelope-open-text"></i>
+
+                <div>
+
+                    <h2>
+                        Entérate de nuestras novedades
+                    </h2>
+
+                    <p>
+                        Recibe información sobre promociones
+                        y nuevos productos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form
+                id="formNewsletter"
+                class="newsletter-form"
+            >
+
+                <input
+                    id="newsletterCorreo"
+                    type="email"
+                    placeholder="Tu correo electrónico"
+                    required
+                >
+
+                <button
+                    class="btn-principal"
+                    type="submit"
+                >
+                    Suscribirme
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     8. PORTAL EMPRESAS / MAYORISTAS — EMANUEL FARMA 3.0
+========================================================= -->
+
+<main
+    id="portalEmpresas"
+    class="portal portal-empresas"
+    hidden
+>
+
+    <!-- CABECERA EMPRESARIAL -->
+
+    <section class="empresa-hero">
+
+        <div class="contenedor">
+
+            <button
+                class="btn-volver-tienda"
+                data-volver-tienda
+                type="button"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver a la tienda
+            </button>
+
+
+            <div class="empresa-hero-grid">
+
+                <div>
+
+                    <span class="subtitulo-seccion">
+                        Emanuel Farma Empresas
+                    </span>
+
+                    <h1>
+                        Portal de compras empresariales
+                    </h1>
+
+                    <p>
+                        Compra productos por volumen,
+                        consulta disponibilidad y solicita
+                        cotizaciones especiales.
+                    </p>
+
+                    <div class="empresa-estado-cuenta">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+                            <strong>
+                                Acceso empresarial autorizado
+                            </strong>
+
+                            <span>
+                                Solo empresas y mayoristas
+                                registrados por Emanuel Farma.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="empresa-kpis">
+
+                    <article>
+                        <span>Productos seleccionados</span>
+                        <strong id="kpiMayoristaProductos">0</strong>
+                    </article>
+
+                    <article>
+                        <span>Unidades</span>
+                        <strong id="kpiMayoristaUnidades">0</strong>
+                    </article>
+
+                    <article>
+                        <span>Subtotal</span>
+                        <strong id="kpiMayoristaSubtotal">
+                            S/ 0.00
+                        </strong>
+                    </article>
+
+                    <article>
+                        <span>Cotizaciones</span>
+                        <strong id="kpiMayoristaCotizaciones">
+                            0
+                        </strong>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMACIÓN DE CUENTA -->
+
+    <section class="seccion">
+
+        <div class="contenedor">
+
+            <div class="admin-kpis">
+
+                <article>
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <span>Empresa</span>
+
+                    <strong id="empresaNombreSesion">
+                        Empresa autorizada
+                    </strong>
+                </article>
+
+
+                <article>
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+
+                    <span>RUC</span>
+
+                    <strong id="empresaRucSesion">
+                        —
+                    </strong>
+                </article>
+
+
+                <article>
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+
+                    <span>Solicitudes</span>
+
+                    <strong id="empresaSolicitudesSesion">
+                        0
+                    </strong>
+                </article>
+
+
+                <article>
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <span>Última compra</span>
+
+                    <strong id="empresaUltimaCompra">
+                        —
+                    </strong>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATÁLOGO MAYORISTA -->
+
+    <section class="seccion">
+
+        <div class="contenedor">
+
+            <div class="mayorista-layout">
+
+                <div class="mayorista-catalogo">
+
+                    <div class="encabezado-seccion">
+
+                        <div>
+
+                            <span class="subtitulo-seccion">
+                                Catálogo empresarial
+                            </span>
+
+                            <h2>
+                                Productos por mayor
+                            </h2>
+
+                            <p>
+                                Busca por nombre, SKU,
+                                categoría o código de barras.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mayorista-filtros">
+
+                        <input
+                            id="buscadorMayorista"
+                            type="search"
+                            placeholder="Buscar producto, SKU o código..."
+                        >
+
+
+                        <select id="filtroCategoriaMayorista">
+
+                            <option value="">
+                                Todas las categorías
+                            </option>
+
+                        </select>
+
+
+                        <select id="filtroStockMayorista">
+
+                            <option value="todos">
+                                Todo el stock
+                            </option>
+
+                            <option value="disponible">
+                                Disponible
+                            </option>
+
+                            <option value="bajo">
+                                Stock bajo
+                            </option>
+
+                            <option value="agotado">
+                                Agotado
+                            </option>
+
+                        </select>
+
+
+                        <select id="ordenMayorista">
+
+                            <option value="nombre">
+                                Nombre
+                            </option>
+
+                            <option value="precio-asc">
+                                Menor precio
+                            </option>
+
+                            <option value="precio-desc">
+                                Mayor precio
+                            </option>
+
+                            <option value="stock-desc">
+                                Mayor stock
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        id="productosMayorista"
+                        class="productos-mayorista"
+                    ></div>
+
+                </div>
+
+
+                <!-- COTIZACIÓN -->
+
+                <aside class="panel-cotizacion">
+
+                    <div class="panel-cotizacion-header">
+
+                        <div>
+                            <span>
+                                Compra empresarial
+                            </span>
+
+                            <h3>
+                                Mi cotización
+                            </h3>
+                        </div>
+
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    </div>
+
+
+                    <div
+                        id="listaCotizacion"
+                        class="lista-cotizacion"
+                    ></div>
+
+
+                    <div class="cotizacion-resumen">
+
+                        <span>
+                            Productos
+                            <strong id="cantidadProductosCotizacion">
+                                0
+                            </strong>
+                        </span>
+
+                        <span>
+                            Unidades
+                            <strong id="cantidadUnidadesCotizacion">
+                                0
+                            </strong>
+                        </span>
+
+                        <span>
+                            Subtotal
+                            <strong id="subtotalCotizacion">
+                                S/ 0.00
+                            </strong>
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        id="btnSolicitarCotizacion"
+                        class="btn-principal btn-ancho"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Solicitar cotización
+                    </button>
+
+
+                
+
+
+                    <button
+                        id="btnHistorialMayorista"
+                        class="btn-secundario btn-ancho"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Mis cotizaciones
+                    </button>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     9. PORTAL VENDEDOR / ADMINISTRACIÓN — EMANUEL FARMA 3.0
+========================================================= -->
+
+<main
+    id="portalVendedor"
+    class="portal portal-vendedor"
+    hidden
+>
+
+    <!-- SIDEBAR -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-logo">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            <div>
+                <strong>Emanuel Farma</strong>
+                <span>Panel de vendedor</span>
+            </div>
+
+        </div>
+
+
+        <nav class="admin-menu">
+
+            <button
+                class="activo"
+                data-admin-seccion="dashboard"
+                type="button"
+            >
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+            </button>
+
+
+            <button
+                data-admin-seccion="productos"
+                type="button"
+            >
+                <i class="fa-solid fa-box"></i>
+                Productos
+            </button>
+
+
+            <button
+                data-admin-seccion="inventario"
+                type="button"
+            >
+                <i class="fa-solid fa-warehouse"></i>
+                Inventario
+            </button>
+
+
+            <button
+                data-admin-seccion="pedidos"
+                type="button"
+            >
+                <i class="fa-solid fa-receipt"></i>
+                Pedidos
+            </button>
+
+
+            <button
+                data-admin-seccion="clientes"
+                type="button"
+            >
+                <i class="fa-solid fa-users"></i>
+                Clientes
+            </button>
+
+
+            <button
+                data-admin-seccion="mayoristas"
+                type="button"
+            >
+                <i class="fa-solid fa-building"></i>
+                Mayoristas
+            </button>
+
+
+            <button
+                data-admin-seccion="promociones"
+                type="button"
+            >
+                <i class="fa-solid fa-tags"></i>
+                Promociones
+            </button>
+
+
+            <button
+                data-admin-seccion="estadisticas"
+                type="button"
+            >
+                <i class="fa-solid fa-chart-line"></i>
+                Estadísticas
+            </button>
+
+        </nav>
+
+
+        <button
+            class="admin-volver"
+            data-volver-tienda
+            type="button"
+        >
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver a la tienda
+        </button>
+
+    </aside>
+
+
+
+    <!-- CONTENIDO -->
+
+    <div class="admin-principal">
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <div>
+                <span>
+                    Emanuel Farma
+                </span>
+
+                <h1 id="tituloAdmin">
+                    Dashboard
+                </h1>
+            </div>
+
+
+            <div class="admin-header-acciones">
+
+                <div class="admin-buscador">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        id="buscadorAdmin"
+                        type="search"
+                        placeholder="Buscar producto, pedido, cliente o SKU..."
+                    >
+
+                </div>
+
+
+                <button
+                    id="btnAdminNotificaciones"
+                    class="admin-avatar"
+                    type="button"
+                    title="Notificaciones"
+                >
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+
+                <button
+                    id="btnAdminCuenta"
+                    class="admin-avatar"
+                    type="button"
+                    title="Cuenta"
+                >
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             DASHBOARD
+        ====================================================== -->
+
+        <section
+            id="adminDashboard"
+            class="admin-seccion activo"
+            data-admin-panel="dashboard"
+        >
+
+            <div class="admin-seccion-header">
+
+                <div>
+                    <h2>
+                        Resumen de hoy
+                    </h2>
+
+                    <p id="adminFechaActual">
+                        Actividad de Emanuel Farma
+                    </p>
+                </div>
+
+
+                <button
+                    id="btnActualizarDashboard"
+                    class="btn-secundario"
+                    type="button"
+                >
+                    <i class="fa-solid fa-rotate"></i>
+                    Actualizar
+                </button>
+
+            </div>
+
+
+            <!-- KPIS -->
+
+            <div class="admin-kpis">
+
+                <article data-admin-ir="productos">
+
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <span>Productos</span>
+
+                    <strong id="adminKpiProductos">
+                        0
+                    </strong>
+
+                    <small>
+                        Ver catálogo
+                    </small>
+
+                </article>
+
+
+                <article data-admin-ir="inventario">
+
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <span>Stock bajo</span>
+
+                    <strong id="adminKpiStockBajo">
+                        0
+                    </strong>
+
+                    <small>
+                        Revisar inventario
+                    </small>
+
+                </article>
+
+
+                <article data-admin-ir="pedidos">
+
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+
+                    <span>Pedidos</span>
+
+                    <strong id="adminKpiPedidos">
+                        0
+                    </strong>
+
+                    <small>
+                        Ver pedidos
+                    </small>
+
+                </article>
+
+
+                <article data-admin-ir="clientes">
+
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <span>Clientes</span>
+
+                    <strong id="adminKpiClientes">
+                        0
+                    </strong>
+
+                    <small>
+                        Ver clientes
+                    </small>
+
+                </article>
+
+            </div>
+
+
+            <!-- VENTAS -->
+
+            <div class="admin-kpis">
+
+                <article>
+
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+
+                    <span>Ventas de hoy</span>
+
+                    <strong id="adminVentasHoy">
+                        S/ 0.00
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+
+                    <span>Yape</span>
+
+                    <strong id="adminVentasYape">
+                        S/ 0.00
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-money-bill"></i>
+                    </div>
+
+                    <span>Efectivo</span>
+
+                    <strong id="adminVentasEfectivo">
+                        S/ 0.00
+                    </strong>
+
+                </article>
+
+
+                <article>
+
+                    <div class="kpi-icono">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+
+                    <span>Ticket promedio</span>
+
+                    <strong id="adminTicketPromedio">
+                        S/ 0.00
+                    </strong>
+
+                </article>
+
+            </div>
+
+
+            <!-- GRÁFICOS -->
+
+            <div class="admin-grid-dos">
+
+                <article class="admin-card oferta-editor">
+
+                    <div class="admin-card-header">
+                        <div>
+                            <h3>Crear nueva oferta</h3>
+                            <p>
+                                Busca un producto de tu inventario y crea una oferta.
+                            </p>
+                        </div>
+                    </div>
+                
+                    <!-- BUSCADOR AUTOCOMPLETE -->
+                    <div class="oferta-buscador-wrap">
+                
+                        <label for="ofertaBuscarProducto">
+                            Buscar producto del inventario
+                        </label>
+                
+                        <div class="oferta-buscador-caja">
+                
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                
+                            <input
+                                id="ofertaBuscarProducto"
+                                type="search"
+                                autocomplete="off"
+                                placeholder="Ejemplo: Amox..."
+                            >
+                
+                        </div>
+                
+                        <!-- AQUÍ SALEN LAS SUGERENCIAS -->
+                        <div
+                            id="ofertaSugerencias"
+                            class="oferta-sugerencias"
+                            hidden
+                        ></div>
+                
+                    </div>
+                
+                
+                    <!-- PRODUCTO SELECCIONADO -->
+                    <div
+                        id="ofertaProductoSeleccionado"
+                        class="oferta-producto-seleccionado"
+                        hidden
+                    >
+                
+                        <div class="oferta-producto-info">
+                
+                            <div
+                                id="ofertaProductoImagen"
+                                class="oferta-producto-imagen"
+                            >
+                                <i class="fa-solid fa-capsules"></i>
+                            </div>
+                
+                            <div>
+                                <small>PRODUCTO SELECCIONADO</small>
+                
+                                <h4 id="ofertaProductoNombre">
+                                    Producto
+                                </h4>
+                
+                                <p>
+                                    Código:
+                                    <strong id="ofertaProductoCodigo">
+                                        —
+                                    </strong>
+                                </p>
+                
+                                <p>
+                                    Stock:
+                                    <strong id="ofertaProductoStock">
+                                        0
+                                    </strong>
+                                </p>
+                            </div>
+                
+                        </div>
+                
+                        <button
+                            id="btnCambiarProductoOferta"
+                            type="button"
+                            class="btn-secundario"
+                        >
+                            Cambiar producto
+                        </button>
+                
+                    </div>
+                
+                
+                    <input
+                        id="ofertaProducto"
+                        type="hidden"
+                        value=""
+                    >
+                
+                
+                    <!-- PRECIOS -->
+                    <div class="oferta-precios-grid">
+                
+                        <label>
+                            Precio normal
+                
+                            <div class="oferta-input-precio">
+                                <span>S/</span>
+                
+                                <input
+                                    id="ofertaPrecioNormal"
+                                    type="number"
+                                    step="0.01"
+                                    readonly
+                                    placeholder="0.00"
+                                >
+                            </div>
+                
+                            <small>
+                                Se obtiene automáticamente del inventario.
+                            </small>
+                        </label>
+                
+                
+                        <label>
+                            Descuento %
+                
+                            <div class="oferta-input-precio">
+                                <span>%</span>
+                
+                                <input
+                                    id="ofertaDescuento"
+                                    type="number"
+                                    min="0"
+                                    max="99"
+                                    step="1"
+                                    placeholder="Ej. 20"
+                                >
+                            </div>
+                
+                            <small>
+                                Puedes escribir el porcentaje.
+                            </small>
+                        </label>
+                
+                
+                        <label>
+                            Precio de oferta
+                
+                            <div class="oferta-input-precio">
+                                <span>S/</span>
+                
+                                <input
+                                    id="ofertaPrecioFinal"
+                                    type="number"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="Ej. 15.90"
+                                >
+                            </div>
+                
+                            <small>
+                                También puedes escribir directamente el precio.
+                            </small>
+                        </label>
+                
+                    </div>
+                
+                
+                    <!-- RESUMEN -->
+                    <div
+                        id="ofertaResumenPrecio"
+                        class="oferta-resumen-precio"
+                        hidden
+                    >
+                
+                        <div>
+                            <span>Precio normal</span>
+                            <del id="ofertaResumenNormal">
+                                S/ 0.00
+                            </del>
+                        </div>
+                
+                        <div>
+                            <span>Descuento</span>
+                            <strong id="ofertaResumenDescuento">
+                                0%
+                            </strong>
+                        </div>
+                
+                        <div>
+                            <span>Nuevo precio</span>
+                            <strong id="ofertaResumenFinal">
+                                S/ 0.00
+                            </strong>
+                        </div>
+                
+                    </div>
+                
+                
+                    <!-- FECHAS -->
+                    <div class="oferta-fechas-grid">
+                
+                        <label>
+                            Fecha de inicio
+                
+                            <input
+                                id="ofertaFechaInicio"
+                                type="date"
+                            >
+                        </label>
+                
+                        <label>
+                            Fecha de finalización
+                
+                            <input
+                                id="ofertaFechaFin"
+                                type="date"
+                            >
+                        </label>
+                
+                    </div>
+                
+                
+                    <div class="oferta-acciones">
+                
+                        <button
+                            id="btnGuardarOferta"
+                            class="btn-principal"
+                            type="button"
+                        >
+                            <i class="fa-solid fa-tags"></i>
+                            Guardar oferta
+                        </button>
+                
+                        <button
+                            id="btnCancelarOferta"
+                            class="btn-secundario"
+                            type="button"
+                        >
+                            Limpiar
+                        </button>
+                
+                    </div>
+                
+                </article>
+                
+                <div
+                    id="adminPromociones"
+                    class="admin-lista"
+                    style="margin-top:20px;"
+                ></div>
+
+
+                    <div
+                        id="adminGraficoVentas"
+                        class="admin-grafico"
+                        style="
+                            min-height:260px;
+                            display:flex;
+                            align-items:flex-end;
+                            gap:12px;
+                            padding:20px;
+                        "
+                    >
+                        <p>
+                            Aún no hay ventas registradas.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <div>
+                            <h2>
+                                Métodos de pago
+                            </h2>
+
+                            <p>
+                                Yape y efectivo
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="adminGraficoPagos"
+                        style="
+                            min-height:260px;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                        "
+                    >
+
+                        <div>
+
+                            <p>
+                                🟣 Yape:
+                                <strong id="adminGraficoYape">
+                                    S/ 0.00
+                                </strong>
+                            </p>
+
+                            <p>
+                                🟢 Efectivo:
+                                <strong id="adminGraficoEfectivo">
+                                    S/ 0.00
+                                </strong>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="admin-grid-dos">
+
+                <article class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <h2>
+                            Productos con stock bajo
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="btn-enlace"
+                            data-admin-ir="inventario"
+                        >
+                            Ver todos
+                        </button>
+
+                    </div>
+
+                    <div id="adminStockBajo"></div>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-header">
+
+                        <h2>
+                            Pedidos recientes
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="btn-enlace"
+                            data-admin-ir="pedidos"
+                        >
+                            Ver todos
+                        </button>
+
+                    </div>
+
+                    <div id="adminPedidosRecientes"></div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PRODUCTOS
+        ====================================================== -->
+
+        <section
+            class="admin-seccion"
+            data-admin-panel="productos"
+            hidden
+        >
+
+            <div class="admin-seccion-header">
+
+                <div>
+                    <h2>
+                        Productos
+                    </h2>
+
+                    <p>
+                        Consulta y administra el catálogo.
+                    </p>
+                </div>
+
+
+                <div>
+
+                    <button
+                        id="btnExportarProductos"
+                        class="btn-secundario"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-download"></i>
+                        Exportar
+                    </button>
+
+
+                    <button
+                        id="btnNuevoProducto"
+                        class="btn-principal"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Nuevo producto
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-filtros">
+
+                <input
+                    id="adminBuscarProducto"
+                    type="search"
+                    placeholder="Buscar nombre, SKU o código de barras..."
+                >
+
+
+                <select id="adminFiltroCategoria">
+
+                    <option value="">
+                        Todas las categorías
+                    </option>
+
+                </select>
+
+
+                <select id="adminFiltroStock">
+
+                    <option value="todos">
+                        Todo el stock
+                    </option>
+
+                    <option value="disponible">
+                        Disponible
+                    </option>
+
+                    <option value="bajo">
+                        Stock bajo
+                    </option>
+
+                    <option value="agotado">
+                        Agotados
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="tabla-responsive">
+
+                <table class="tabla-admin">
+
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>SKU</th>
+                            <th>Código</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaAdminProductos"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             INVENTARIO
+        ====================================================== -->
+
+        <section
+            class="admin-seccion"
+            data-admin-panel="inventario"
+            hidden
+        >
+
+            <div class="admin-seccion-header">
+
+                <div>
+                    <h2>
+                        Inventario
+                    </h2>
+
+                    <p>
+                        Control de existencias y reposición.
+                    </p>
+                </div>
+
+
+                <div>
+
+                    <button
+                        id="btnImprimirInventario"
+                        class="btn-secundario"
+                        type="button"
+                        onclick="window.print()"
+                    >
+                        <i class="fa-solid fa-print"></i>
+                        Imprimir
+                    </button>
+
+
+                    <button
+                        id="btnImportarInventario"
+                        class="btn-secundario"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-file-excel"></i>
+                        Importar Excel
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-kpis">
+
+                <article>
+                    <span>Productos</span>
+                    <strong id="inventarioTotal">0</strong>
+                </article>
+
+                <article>
+                    <span>Disponibles</span>
+                    <strong id="inventarioDisponibles">0</strong>
+                </article>
+
+                <article>
+                    <span>Stock bajo</span>
+                    <strong id="inventarioBajo">0</strong>
+                </article>
+
+                <article>
+                    <span>Agotados</span>
+                    <strong id="inventarioAgotados">0</strong>
+                </article>
+
+            </div>
+
+
+            <div class="admin-filtros oferta-buscador-contenedor">
+
+                <div class="oferta-buscador-box">
+            
+                    <i class="fa-solid fa-magnifying-glass"></i>
+            
+                    <input
+                        id="ofertaBuscarProducto"
+                        type="search"
+                        placeholder="Buscar por nombre, SKU o código de barras..."
+                        autocomplete="off"
+                    >
+            
+                    <input
+                        id="ofertaProducto"
+                        type="hidden"
+                        value=""
+                    >
+            
+                    <div
+                        id="ofertaResultadosBusqueda"
+                        class="oferta-resultados-busqueda"
+                        hidden
+                    ></div>
+            
+                </div>
+            
+            </div>
+
+            <div class="tabla-responsive">
+
+                <table class="tabla-admin">
+
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Código</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                            <th>Actualizar</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaInventario"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PEDIDOS
+        ====================================================== -->
+
+        <section
+            class="admin-seccion"
+            data-admin-panel="pedidos"
+            hidden
+        >
+
+            <div class="admin-seccion-header">
+
+                <div>
+                    <h2>
+                        Pedidos
+                    </h2>
+
+                    <p>
+                        Prepara, completa y conserva
+                        el historial de pedidos.
+                    </p>
+                </div>
+
+
+                <button
+                    id="btnImprimirPedidos"
+                    class="btn-secundario"
+                    type="button"
+                    onclick="window.print()"
+                >
+                    <i class="fa-solid fa-print"></i>
+                    Imprimir
+                </button>
+
+            </div>
+
+
+            <div class="admin-kpis">
+
+                <article>
+                    <span>Total</span>
+                    <strong id="pedidosTotal">0</strong>
+                </article>
+
+                <article>
+                    <span>Pendientes</span>
+                    <strong id="pedidosPendientes">0</strong>
+                </article>
+
+                <article>
+                    <span>Preparando</span>
+                    <strong id="pedidosPreparando">0</strong>
+                </article>
+
+                <article>
+                    <span>Listos</span>
+                    <strong id="pedidosListos">0</strong>
+                </article>
+
+            </div>
+
+
+            <div class="admin-filtros">
+
+                <input
+                    id="adminBuscarPedido"
+                    type="search"
+                    placeholder="Buscar pedido, cliente o producto..."
+                >
+
+
+                <select id="adminFiltroPedido">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="pendiente">
+                        Pendientes
+                    </option>
+
+                    <option value="preparando">
+                        Preparando
+                    </option>
+
+                    <option value="listo">
+                        Listos
+                    </option>
+
+                    <option value="entregado">
+                        Entregados
+                    </option>
+
+                    <option value="archivado">
+                        Archivados
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="adminListaPedidos"
+                class="admin-lista"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CLIENTES
+        ====================================================== -->
+
+        <section
+            class="admin-seccion"
+            data-admin-panel="clientes"
+            hidden
+        >
+
+            <div class="admin-seccion-header">
+
+                <div>
+                    <h2>
+                        Clientes
+                    </h2>
+
+                    <p>
+                        Usuarios y actividad de compra.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="admin-kpis">
+
+                <article>
+                    <span>Total clientes</span>
+                    <strong id="clientesKpiTotal">0</strong>
+                </article>
+
+                <article>
+                    <span>Con pedidos</span>
+                    <strong id="clientesKpiCompradores">0</strong>
+                </article>
+
+                <article>
+                    <span>Pedidos realizados</span>
+                    <strong id="clientesKpiPedidos">0</strong>
+                </article>
+
+                <article>
+                    <span>Ventas</span>
+                    <strong id="clientesKpiVentas">
+                        S/ 0.00
+                    </strong>
+                </article>
+
+            </div>
+
+
+            <div class="admin-filtros">
+
+                <input
+                    id="adminBuscarCliente"
+                    type="search"
+                    placeholder="Nombre, correo o teléfono..."
+                >
+
+
+                <select id="adminFiltroCliente">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="con-pedidos">
+                        Con pedidos
+                    </option>
+
+                    <option value="sin-pedidos">
+                        Sin pedidos
+                    </option>
+
+                    <option value="frecuentes">
+                        Frecuentes
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="adminListaClientes"
+                class="admin-lista"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MAYORISTAS — ADMINISTRACIÓN
+        ====================================================== -->
+
+        <section
+            class="admin-seccion"
+            data-admin-panel="mayoristas"
+            hidden
+        >
+
+            <div class="admin-seccion-header">
+
+                <div>
+                    <h2>
+                        Empresas y mayoristas
+                    </h2>
+
+                    <p>
+                        Administra las cuentas empresariales
+                        autorizadas.
+                    </p>
+                </div>
+
+
+                <button
+                    id="btnNuevoMayorista"
+                    class="btn-principal"
+                    type="button"
+                >
+                    <i class="fa-solid fa-user-plus"></i>
+                    Crear acceso mayorista
+                </button>
+
+            </div>
+
+
+            <div class="admin-kpis">
+
+                <article>
+                    <span>Empresas</span>
+                    <strong id="mayoristasKpiEmpresas">0</strong>
+                </article>
+
+                <article>
+                    <span>Cotizaciones</span>
+                    <strong id="mayoristasKpiCotizaciones">0</strong>
+                </article>
+
+                <article>
+                    <span>Pendientes</span>
+                    <strong id="mayoristasKpiPendientes">0</strong>
+                </article>
+
+                <article>
+                    <span>Ventas</span>
+                    <strong id="mayoristasKpiVentas">
+                        S/ 0.00
+                    </strong>
+                </article>
+
+            </div>
+
+
+            <!-- CREAR CUENTA MAYORISTA -->
+
+            <article class="admin-card">
+
+                <div class="admin-card-header">
+
+                    <div>
+                        <h3>
+                            Crear usuario empresarial
+                        </h3>
+
+                        <p>
+                            Tú decides qué empresa puede ingresar.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    style="
+                        display:grid;
+                        grid-template-columns:
+                        repeat(auto-fit,minmax(190px,1fr));
+                        gap:14px;
+                    "
+                >
+
+                    <label>
+                        Empresa
+
+                        <input
+                            id="nuevoMayoristaEmpresa"
+                            type="text"
+                            placeholder="Nombre de empresa"
+                        >
+                    </label>
+
+
+                    <label>
+                        RUC
+
+                        <input
+                            id="nuevoMayoristaRuc"
+                            type="text"
+                            placeholder="RUC"
+                        >
+                    </label>
+
+
+                    <label>
+                        Responsable
+
+                        <input
+                            id="nuevoMayoristaResponsable"
+                            type="text"
+                            placeholder="Nombre del responsable"
+                        >
+                    </label>
+
+
+                    <label>
+                        Teléfono
+
+                        <input
+                            id="nuevoMayoristaTelefono"
+                            type="tel"
+                            placeholder="999 999 999"
+                        >
+                    </label>
+
+
+                    <label>
+                        Correo / usuario
+
+                        <input
+                            id="nuevoMayoristaCorreo"
+                            type="email"
+                            placeholder="empresa@correo.com"
+                        >
+                    </label>
+
+
+                    <label>
+                        Contraseña
+
+                        <input
+                            id="nuevoMayoristaPassword"
+                            type="text"
+                            placeholder="Contraseña asignada"
+                        >
+                    </label>
+
+                </div>
+
+
+                <div style="margin-top:18px;">
+
+                    <button
+                        id="btnGuardarMayorista"
+                        class="btn-principal"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Crear cuenta
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <div
+                class="admin-filtros"
+                style="margin-top:20px;"
+            >
+
+                <input
+                    id="adminBuscarMayorista"
+                    type="search"
+                    placeholder="Buscar empresa, RUC o responsable..."
+                >
+
+            </div>
+
+
+            <div
+                id="adminListaMayoristas"
+                class="admin-lista"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROMOCIONES
+        ====================================================== -->
+
+        <section
+            class="admin-seccion"
+            data-admin-panel="promociones"
+            hidden
+        >
+
+            <div class="admin-seccion-header">
+
+                <div>
+                    <h2>
+                        Promociones y ofertas
+                    </h2>
+
+                    <p>
+                        Crea y administra descuentos.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="admin-kpis">
+
+                <article>
+                    <span>Ofertas activas</span>
+                    <strong id="promoKpiActivas">0</strong>
+                </article>
+
+                <article>
+                    <span>Productos en oferta</span>
+                    <strong id="promoKpiProductos">0</strong>
+                </article>
+
+                <article>
+                    <span>Descuento promedio</span>
+                    <strong id="promoKpiDescuento">0%</strong>
+                </article>
+
+                <article>
+                    <span>Por vencer</span>
+                    <strong id="promoKpiVencer">0</strong>
+                </article>
+
+            </div>
+
+
+            <article class="admin-card">
+
+                <div class="admin-card-header">
+
+                    <div>
+                        <h3>
+                            Crear nueva oferta
+                        </h3>
+
+                        <p>
+                            Selecciona un producto
+                            y establece el descuento.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-filtros">
+
+                    <input
+                        id="ofertaBuscarProducto"
+                        type="search"
+                        placeholder="Buscar producto..."
+                    >
+
+
+                    <select id="ofertaProducto">
+
+                        <option value="">
+                            Seleccionar producto
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div
+                    style="
+                        display:grid;
+                        grid-template-columns:
+                        repeat(auto-fit,minmax(170px,1fr));
+                        gap:14px;
+                        margin-top:18px;
+                    "
+                >
+
+                    <label>
+                        Precio normal
+
+                        <input
+                            id="ofertaPrecioNormal"
+                            type="number"
+                            step="0.01"
+                            readonly
+                        >
+                    </label>
+
+
+                    <label>
+                        Descuento %
+
+                        <input
+                            id="ofertaDescuento"
+                            type="number"
+                            min="1"
+                            max="90"
+                            value="10"
+                        >
+                    </label>
+
+
+                    <label>
+                        Precio de oferta
+
+                        <input
+                            id="ofertaPrecioFinal"
+                            type="number"
+                            step="0.01"
+                            readonly
+                        >
+                    </label>
+
+
+                    <label>
+                        Desde
+
+                        <input
+                            id="ofertaFechaInicio"
+                            type="date"
+                        >
+                    </label>
+
+
+                    <label>
+                        Hasta
+
+                        <input
+                            id="ofertaFechaFin"
+                            type="date"
+                        >
+                    </label>
+
+                </div>
+
+
+                <div
+                    style="
+                        margin-top:18px;
+                        display:flex;
+                        gap:10px;
+                    "
+                >
+
+                    <button
+                        id="btnGuardarOferta"
+                        class="btn-principal"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-tags"></i>
+                        Guardar oferta
+                    </button>
+
+
+                    <button
+                        id="btnCancelarOferta"
+                        class="btn-secundario"
+                        type="button"
+                    >
+                        Limpiar
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <div
+                id="adminPromociones"
+                class="admin-lista"
+                style="margin-top:20px;"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ESTADÍSTICAS
+        ====================================================== -->
+
+        <section
+            class="admin-seccion"
+            data-admin-panel="estadisticas"
+            hidden
+        >
+
+            <div class="admin-seccion-header">
+
+                <div>
+                    <h2>
+                        Estadísticas
+                    </h2>
+
+                    <p>
+                        Rendimiento de Emanuel Farma.
+                    </p>
+                </div>
+
+
+                <select id="estadisticasPeriodo">
+
+                    <option value="hoy">
+                        Hoy
+                    </option>
+
+                    <option value="7">
+                        7 días
+                    </option>
+
+                    <option value="30">
+                        30 días
+                    </option>
+
+                    <option value="todo">
+                        Todo
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="admin-kpis">
+
+                <article>
+                    <span>Ventas</span>
+                    <strong id="estadisticaVentas">
+                        S/ 0.00
+                    </strong>
+                </article>
+
+                <article>
+                    <span>Pedidos</span>
+                    <strong id="estadisticaPedidos">
+                        0
+                    </strong>
+                </article>
+
+                <article>
+                    <span>Ticket promedio</span>
+                    <strong id="estadisticaTicket">
+                        S/ 0.00
+                    </strong>
+                </article>
+
+                <article>
+                    <span>Productos vendidos</span>
+                    <strong id="estadisticaProductos">
+                        0
+                    </strong>
+                </article>
+
+            </div>
+
+
+            <div class="admin-grid-dos">
+
+                <article class="admin-card">
+
+                    <div class="admin-card-header">
+                        <h3>
+                            Ventas por día
+                        </h3>
+                    </div>
+
+                    <div
+                        id="graficoVentas"
+                        style="
+                            min-height:300px;
+                            display:flex;
+                            align-items:flex-end;
+                            gap:12px;
+                            padding:20px;
+                        "
+                    >
+                        <p>
+                            Sin ventas registradas.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-header">
+                        <h3>
+                            Métodos de pago
+                        </h3>
+                    </div>
+
+
+                    <div
+                        id="graficoPagos"
+                        style="
+                            min-height:300px;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                        "
+                    >
+
+                        <div>
+
+                            <p>
+                                🟣 Yape:
+                                <strong id="estadisticaYape">
+                                    S/ 0.00
+                                </strong>
+                            </p>
+
+                            <p>
+                                🟢 Efectivo:
+                                <strong id="estadisticaEfectivo">
+                                    S/ 0.00
+                                </strong>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="admin-grid-dos">
+
+                <article class="admin-card">
+
+                    <div class="admin-card-header">
+                        <h3>
+                            Productos más vendidos
+                        </h3>
+                    </div>
+
+                    <div id="estadisticaTopProductos">
+                        Sin ventas registradas.
+                    </div>
+
+                </article>
+
+
+                <article class="admin-card">
+
+                    <div class="admin-card-header">
+                        <h3>
+                            Estado del inventario
+                        </h3>
+                    </div>
+
+
+                    <div style="display:grid;gap:16px;">
+
+                        <p>
+                            Disponibles:
+                            <strong id="estadisticaDisponibles">
+                                0
+                            </strong>
+                        </p>
+
+                        <p>
+                            Stock bajo:
+                            <strong id="estadisticaStockBajo">
+                                0
+                            </strong>
+                        </p>
+
+                        <p>
+                            Agotados:
+                            <strong id="estadisticaAgotados">
+                                0
+                            </strong>
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <article
+                class="admin-card"
+                style="margin-top:20px;"
+            >
+
+                <div class="admin-card-header">
+                    <h3>
+                        Resumen general
+                    </h3>
+                </div>
+
+                <div id="adminEstadisticas">
+                    Todavía no existen datos suficientes.
+                </div>
+
+            </article>
+
+        </section>
+
+    </div>
+
+</main>
+
+<!-- =========================================================
+     10. MODAL VISTA RÁPIDA DE PRODUCTO
+========================================================= -->
+
+<section
+    id="modalProducto"
+    class="modal"
+    hidden
+>
+
+    <div class="modal-contenido modal-producto-contenido">
+
+
+        <button
+            class="btn-cerrar"
+            data-cerrar-modal="modalProducto"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <div class="modal-producto-grid">
+
+
+            <div class="modal-producto-imagen">
+
+                <img
+                    id="modalProductoImagen"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+
+            <div class="modal-producto-info">
+
+
+                <span
+                    id="modalProductoCategoria"
+                    class="producto-categoria"
+                ></span>
+
+
+                <h2
+                    id="modalProductoNombre"
+                ></h2>
+
+
+                <p
+                    id="modalProductoMarca"
+                ></p>
+
+
+                <div
+                    id="modalProductoRating"
+                    class="producto-rating"
+                ></div>
+
+
+                <div class="modal-producto-precio">
+
+                    <strong
+                        id="modalProductoPrecio"
+                    >
+                        S/ 0.00
+                    </strong>
+
+                    <del
+                        id="modalProductoPrecioAnterior"
+                        hidden
+                    ></del>
+
+                </div>
+
+
+                <p
+                    id="modalProductoDescripcion"
+                ></p>
+
+
+                <div
+                    id="modalProductoStock"
+                    class="producto-stock"
+                ></div>
+
+
+
+                <div class="selector-cantidad">
+
+                    <button
+                        id="modalCantidadMenos"
+                        type="button"
+                    >
+                        −
+                    </button>
+
+                    <input
+                        id="modalProductoCantidad"
+                        type="number"
+                        min="1"
+                        value="1"
+                    >
+
+                    <button
+                        id="modalCantidadMas"
+                        type="button"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+
+
+                <button
+                    id="modalAgregarCarrito"
+                    class="btn-principal btn-ancho"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-cart-plus"></i>
+
+                    Agregar al carrito
+
+                </button>
+
+
+
+                <div class="modal-producto-acciones">
+
+                    <button
+                        id="modalFavorito"
+                        type="button"
+                    >
+
+                        <i class="fa-regular fa-heart"></i>
+
+                        Favorito
+
+                    </button>
+
+
+                    <button
+                        id="modalComparar"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-code-compare"></i>
+
+                        Comparar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     11. CARRITO
+========================================================= -->
+
+<aside
+    id="panelCarrito"
+    class="panel-lateral panel-carrito"
+    hidden
+>
+
+
+    <div class="panel-header">
+
+        <div>
+
+            <span>
+                Tu compra
+            </span>
+
+            <h2>
+                Carrito
+            </h2>
+
+        </div>
+
+
+        <button
+            class="btn-cerrar"
+            data-cerrar-panel="panelCarrito"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <div
+        id="productosCarrito"
+        class="productos-carrito"
+    ></div>
+
+
+
+    <div
+        id="carritoRecomendaciones"
+        class="carrito-recomendaciones"
+    ></div>
+
+
+
+    <div class="carrito-resumen">
+
+
+        <div>
+
+            <span>
+                Subtotal
+            </span>
+
+            <strong
+                id="carritoSubtotal"
+            >
+                S/ 0.00
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                Descuento
+            </span>
+
+            <strong
+                id="carritoDescuento"
+            >
+                S/ 0.00
+            </strong>
+
+        </div>
+
+
+        <div class="carrito-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong
+                id="carritoTotal"
+            >
+                S/ 0.00
+            </strong>
+
+        </div>
+
+
+        <button
+            id="btnIrCheckout"
+            class="btn-principal btn-ancho"
+            type="button"
+        >
+
+            Continuar compra
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================================
+     12. CHECKOUT
+========================================================= -->
+
+<section
+    id="pantallaCheckout"
+    class="pantalla-checkout"
+    hidden
+>
+
+    <div class="contenedor">
+
+
+        <button
+            id="btnVolverCheckout"
+            class="btn-volver"
+            type="button"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Volver al carrito
+
+        </button>
+
+
+
+        <div class="checkout-header">
+
+            <span>
+                Emanuel Farma
+            </span>
+
+            <h1>
+                Finalizar compra
+            </h1>
+
+        </div>
+
+
+
+        <div class="checkout-grid">
+
+
+            <div class="checkout-formularios">
+
+
+                <!-- DATOS -->
+
+                <section class="checkout-card">
+
+                    <div class="checkout-card-titulo">
+
+                        <span>
+                            1
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Tus datos
+                            </h2>
+
+                            <p>
+                                Información para registrar tu pedido.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid-dos">
+
+                        <label>
+
+                            Nombres
+
+                            <input
+                                id="checkoutNombre"
+                                type="text"
+                                required
+                            >
+
+                        </label>
+
+
+                        <label>
+
+                            Apellidos
+
+                            <input
+                                id="checkoutApellido"
+                                type="text"
+                            >
+
+                        </label>
+
+
+                        <label>
+
+                            Teléfono
+
+                            <input
+                                id="checkoutTelefono"
+                                type="tel"
+                                required
+                            >
+
+                        </label>
+
+
+                        <label>
+
+                            Correo
+
+                            <input
+                                id="checkoutCorreo"
+                                type="email"
+                                required
+                            >
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- RECOJO -->
+
+                <section class="checkout-card">
+
+                    <div class="checkout-card-titulo">
+
+                        <span>
+                            2
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Recojo
+                            </h2>
+
+                            <p>
+                                Tu compra será recogida en la botica.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="opcion-checkout seleccionada">
+
+                        <input
+                            type="radio"
+                            name="tipoEntrega"
+                            value="recojo"
+                            checked
+                        >
+
+                        <i class="fa-solid fa-store"></i>
+
+                        <div>
+
+                            <strong>
+                                Recojo en Emanuel Farma
+                            </strong>
+
+                            <span>
+                                Jr. San Martin s/n
+                            </span>
+
+                        </div>
+
+                    </label>
+
+                </section>
+
+
+
+                <!-- PAGO -->
+
+                <section class="checkout-card">
+
+                    <div class="checkout-card-titulo">
+
+                        <span>
+                            3
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Método de pago
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="metodos-pago">
+
+
+                        <label class="opcion-checkout">
+
+                            <input
+                                type="radio"
+                                name="metodoPago"
+                                value="yape"
+                                checked
+                            >
+
+                            <div>
+
+                                <strong>
+                                    Yape
+                                </strong>
+
+                                <span>
+                                    Confirmación al registrar el pedido.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+
+
+                        <label class="opcion-checkout">
+
+                            <input
+                                type="radio"
+                                name="metodoPago"
+                                value="efectivo"
+                            >
+
+                            <div>
+
+                                <strong>
+                                    Efectivo
+                                </strong>
+
+                                <span>
+                                    Paga al recoger tu pedido.
+                                </span>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- RESUMEN -->
+
+            <aside class="checkout-resumen">
+
+
+                <h2>
+                    Resumen
+                </h2>
+
+
+                <div
+                    id="checkoutProductos"
+                    class="checkout-productos"
+                ></div>
+
+
+                <div class="checkout-totales">
+
+                    <div>
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong
+                            id="checkoutSubtotal"
+                        >
+                            S/ 0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Descuento
+                        </span>
+
+                        <strong
+                            id="checkoutDescuento"
+                        >
+                            S/ 0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong
+                            id="checkoutTotal"
+                        >
+                            S/ 0.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="btnConfirmarPedido"
+                    class="btn-principal btn-ancho"
+                    type="button"
+                >
+
+                    Confirmar pedido
+
+                </button>
+
+
+                <small class="checkout-aviso">
+
+                    La disponibilidad y venta de determinados
+                    medicamentos puede estar sujeta a receta
+                    y normativa aplicable.
+
+                </small>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     13. MODAL EDITAR / CREAR PRODUCTO
+========================================================= -->
+
+<section
+    id="modalEditarProducto"
+    class="modal"
+    hidden
+>
+
+    <div class="modal-contenido modal-admin-producto">
+
+
+        <button
+            class="btn-cerrar"
+            data-cerrar-modal="modalEditarProducto"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-header">
+
+            <span>
+                Administración
+            </span>
+
+            <h2
+                id="tituloEditorProducto"
+            >
+                Nuevo producto
+            </h2>
+
+        </div>
+
+
+
+        <form
+            id="formEditarProducto"
+        >
+
+
+            <input
+                id="editarProductoId"
+                type="hidden"
+            >
+
+
+            <div class="form-grid-dos">
+
+
+                <label>
+
+                    Nombre
+
+                    <input
+                        id="editarNombre"
+                        type="text"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    SKU
+
+                    <input
+                        id="editarSku"
+                        type="text"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Código de barras
+
+                    <input
+                        id="editarCodigoBarras"
+                        type="text"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Categoría
+
+                    <input
+                        id="editarCategoria"
+                        type="text"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Marca
+
+                    <input
+                        id="editarMarca"
+                        type="text"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Precio
+
+                    <input
+                        id="editarPrecio"
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Stock
+
+                    <input
+                        id="editarStock"
+                        type="number"
+                        min="0"
+                        step="1"
+                        required
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Imagen URL
+
+                    <input
+                        id="editarImagen"
+                        type="url"
+                    >
+
+                </label>
+
+            </div>
+
+
+            <label>
+
+                Descripción
+
+                <textarea
+                    id="editarDescripcion"
+                    rows="4"
+                ></textarea>
+
+            </label>
+
+
+
+            <div class="checks-producto">
+
+                <label>
+
+                    <input
+                        id="editarDestacado"
+                        type="checkbox"
+                    >
+
+                    Destacado
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        id="editarOferta"
+                        type="checkbox"
+                    >
+
+                    Oferta
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        id="editarNuevo"
+                        type="checkbox"
+                    >
+
+                    Nuevo
+
+                </label>
+
+            </div>
+
+
+            <button
+                class="btn-principal btn-ancho"
+                type="submit"
+            >
+
+                Guardar producto
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     14. PANEL MI CUENTA
+========================================================= -->
+
+<aside
+    id="panelCuenta"
+    class="panel-lateral panel-cuenta"
+    hidden
+>
+
+
+    <div class="panel-header">
+
+        <div>
+
+            <span>
+                Emanuel Farma
+            </span>
+
+            <h2>
+                Mi cuenta
+            </h2>
+
+        </div>
+
+
+        <button
+            class="btn-cerrar"
+            data-cerrar-panel="panelCuenta"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <div
+        id="cuentaSinSesion"
+        class="cuenta-sin-sesion"
+    >
+
+        <i class="fa-regular fa-user"></i>
+
+        <h3>
+            Inicia sesión
+        </h3>
+
+        <p>
+            Accede a tus pedidos, favoritos
+            y datos personales.
+        </p>
+
+
+        <button
+            id="btnCuentaLogin"
+            class="btn-principal btn-ancho"
+            type="button"
+        >
+
+            Iniciar sesión
+
+        </button>
+
+
+        <button
+            id="btnCuentaRegistro"
+            class="btn-secundario btn-ancho"
+            type="button"
+        >
+
+            Crear cuenta
+
+        </button>
+
+    </div>
+
+
+
+    <div
+        id="cuentaConSesion"
+        hidden
+    >
+
+
+        <div class="cuenta-perfil">
+
+            <div class="cuenta-avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div>
+
+                <strong
+                    id="cuentaNombre"
+                ></strong>
+
+                <span
+                    id="cuentaCorreo"
+                ></span>
+
+            </div>
+
+        </div>
+
+
+
+        <nav class="cuenta-tabs">
+
+
+            <button
+                class="activo"
+                data-cuenta-tab="perfil"
+                type="button"
+            >
+                Perfil
+            </button>
+
+
+            <button
+                data-cuenta-tab="pedidos"
+                type="button"
+            >
+                Pedidos
+            </button>
+
+
+            <button
+                data-cuenta-tab="favoritos"
+                type="button"
+            >
+                Favoritos
+            </button>
+
+
+            <button
+                data-cuenta-tab="seguridad"
+                type="button"
+            >
+                Seguridad
+            </button>
+
+        </nav>
+
+
+
+        <div
+            class="cuenta-panel activo"
+            data-cuenta-panel="perfil"
+        >
+
+            <div
+                id="datosPerfil"
+            ></div>
+
+        </div>
+
+
+        <div
+            class="cuenta-panel"
+            data-cuenta-panel="pedidos"
+            hidden
+        >
+
+            <div
+                id="listaPedidosUsuario"
+            ></div>
+
+        </div>
+
+
+        <div
+            class="cuenta-panel"
+            data-cuenta-panel="favoritos"
+            hidden
+        >
+
+            <div
+                id="listaFavoritosCuenta"
+            ></div>
+
+        </div>
+
+
+        <div
+            class="cuenta-panel"
+            data-cuenta-panel="seguridad"
+            hidden
+        >
+
+            <div class="cuenta-seguridad">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>
+                    Seguridad
+                </h3>
+
+                <p>
+                    La autenticación definitiva deberá conectarse
+                    a un servicio seguro de autenticación.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <button
+            id="btnCerrarSesion"
+            class="btn-peligro btn-ancho"
+            type="button"
+        >
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Cerrar sesión
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================================
+     15. COMPARADOR
+========================================================= -->
+
+<div
+    id="panelComparador"
+    class="panel-comparador"
+    hidden
+>
+
+    <div class="contenedor panel-comparador-contenido">
+
+
+        <div>
+
+            <i class="fa-solid fa-code-compare"></i>
+
+            <span>
+
+                <strong
+                    id="contadorComparador"
+                >
+                    0
+                </strong>
+
+                productos para comparar
+
+            </span>
+
+        </div>
+
+
+        <div
+            id="miniProductosComparador"
+        ></div>
+
+
+        <button
+            id="btnAbrirComparador"
+            class="btn-principal"
+            type="button"
+        >
+
+            Comparar
+
+        </button>
+
+
+        <button
+            id="btnLimpiarComparador"
+            class="btn-texto"
+            type="button"
+        >
+
+            Limpiar
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     16. PEDIDO INTELIGENTE
+========================================================= -->
+
+<section
+    id="modalPedidoInteligente"
+    class="modal"
+    hidden
+>
+
+    <div class="modal-contenido pedido-inteligente-modal">
+
+
+        <button
+            class="btn-cerrar"
+            data-cerrar-modal="modalPedidoInteligente"
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+       
+
+
+            <div>
+
+                <span>
+                    Emanuel Inteligente
+                </span>
+
+                <h2>
+                    Crea tu pedido escribiendo una lista
+                </h2>
+
+                <p>
+                    Nosotros buscaremos los productos
+                    automáticamente.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <textarea
+            id="textoPedidoInteligente"
+            rows="6"
+            placeholder="Ejemplo: 2 alcoholes, vitamina C, pañales talla M y jabón"
+        ></textarea>
+
+
+        <div class="pedido-inteligente-ayuda">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span>
+                Puedes separar productos con comas
+                o escribir uno por línea.
+            </span>
+
+        </div>
+
+
+        <button
+            id="btnProcesarPedidoInteligente"
+            class="btn-principal btn-ancho"
+            type="button"
+        >
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            Buscar todos los productos
+
+        </button>
+
+
+        <div
+            id="resultadoPedidoInteligente"
+            class="resultado-pedido-inteligente"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     17. ASISTENTE EMANUEL
+========================================================= -->
+
+<button
+    id="btnAsistente"
+    class="btn-flotante-asistente"
+    type="button"
+    aria-label="Abrir Asistente Emanuel"
+>
+
+    <i class="fa-solid fa-comment-medical"></i>
+
+</button>
+
+
+
+<aside
+    id="ventanaAsistente"
+    class="ventana-asistente"
+    hidden
+>
+
+
+    <div class="asistente-header">
+
+        <div class="asistente-identidad">
+
+            <div class="asistente-avatar">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Asistente Emanuel
+                </strong>
+
+                <span>
+                    En línea
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="btn-cerrar"
+            data-cerrar-asistente
+            type="button"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <div
+        id="mensajesAsistente"
+        class="asistente-mensajes"
+        aria-live="polite"
+    ></div>
+
+
+
+    <div class="asistente-rapidos">
+
+
+        <button
+            data-asistente-rapido="ofertas"
+            type="button"
+        >
+            Ofertas
+        </button>
+
+
+        <button
+            data-asistente-rapido="categorias"
+            type="button"
+        >
+            Categorías
+        </button>
+
+
+        <button
+            data-asistente-rapido="pedido inteligente"
+            type="button"
+        >
+            Pedido inteligente
+        </button>
+
+
+        <button
+            data-asistente-rapido="mis pedidos"
+            type="button"
+        >
+            Mis pedidos
+        </button>
+
+    </div>
+
+
+
+    <div class="asistente-input">
+
+
+        <input
+            id="inputAsistente"
+            type="text"
+            placeholder="Escribe tu consulta..."
+            autocomplete="off"
+        >
+
+
+        <button
+            id="btnEnviarAsistente"
+            type="button"
+            aria-label="Enviar"
+        >
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+        </button>
+
+    </div>
+
+
+    <small class="asistente-aviso">
+
+        El asistente puede ayudarte a buscar productos,
+        precios y disponibilidad. No realiza diagnósticos
+        ni indica qué medicamento debes tomar.
+
+    </small>
+
+</aside>
+
+
+
+
+
+<!-- =========================================================
+     19. FOOTER
+========================================================= -->
+
+<footer
+    id="footerPrincipal"
+    class="footer-principal"
+>
+
+    <div class="contenedor footer-grid">
+
+
+        <div class="footer-marca">
+
+
+            <div class="footer-logo">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <div>
+
+                    <strong>
+                        Emanuel Farma
+                    </strong>
+
+                    <span>
+                        Tu botica de confianza
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Una experiencia digital para encontrar
+                productos de salud, bienestar y cuidado
+                personal de manera rápida y sencilla.
+            </p>
+
+
+            <div class="footer-redes">
+
+                <a
+                    href="https://wa.me/51987456389"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                </a>
+
+
+                <button
+                    data-red-social="facebook"
+                    type="button"
+                    aria-label="Facebook"
+                >
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </button>
+
+
+                <button
+                    data-red-social="tiktok"
+                    type="button"
+                    aria-label="TikTok"
+                >
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Emanuel Farma
+            </h3>
+
+            <ul>
+
+                <li>
+                    <button
+                        data-nav="inicio"
+                        type="button"
+                    >
+                        Inicio
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                        data-nav="productos"
+                        type="button"
+                    >
+                        Productos
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                        data-nav="ofertas"
+                        type="button"
+                    >
+                        Ofertas
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                        data-nav="empresas"
+                        type="button"
+                    >
+                        Empresas
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Ayuda
+            </h3>
+
+            <ul>
+
+                <li>
+                    <button
+                        data-ayuda="comprar"
+                        type="button"
+                    >
+                        Cómo comprar
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                        data-ayuda="pedidos"
+                        type="button"
+                    >
+                        Mis pedidos
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                        data-ayuda="pagos"
+                        type="button"
+                    >
+                        Métodos de pago
+                    </button>
+                </li>
+
+                <li>
+                    <button
+                        data-ayuda="privacidad"
+                        type="button"
+                    >
+                        Privacidad
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Contacto
+            </h3>
+
+
+            <ul class="footer-contacto">
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Jr. San Martin s/n
+                    </span>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a href="tel:+51987456389">
+                        987 456 389
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:emanuelfarma123@gmail.com">
+                        emanuelfarma123@gmail.com
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>
+                        Lun - Sáb<br>
+                        06:00 - 22:00
+                    </span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-inferior">
+
+        <div class="contenedor">
+
+            <p>
+
+                ©
+                <span data-anio></span>
+                Emanuel Farma.
+                Todos los derechos reservados.
+
+            </p>
+
+
+            <div>
+
+                <button
+                    type="button"
+                    data-legal="privacidad"
+                >
+                    Privacidad
+                </button>
+
+                <button
+                    type="button"
+                    data-legal="terminos"
+                >
+                    Términos
+                </button>
+
+                <button
+                    type="button"
+                    data-legal="cookies"
+                >
+                    Cookies
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     20. COOKIES
+========================================================= -->
+
+<div
+    id="bannerCookies"
+    class="banner-cookies"
+    hidden
+>
+
+    <div>
+
+        <i class="fa-solid fa-cookie-bite"></i>
+
+        <div>
+
+            <strong>
+                Usamos cookies
+            </strong>
+
+            <p>
+                Utilizamos almacenamiento necesario para
+                mantener funciones como carrito,
+                preferencias y sesión.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="cookies-acciones">
+
+        <button
+            id="btnCookiesNecesarias"
+            class="btn-secundario"
+            data-cookies-necesarias
+            type="button"
+        >
+            Solo necesarias
+        </button>
+
+
+        <button
+            id="btnAceptarCookies"
+            class="btn-principal"
+            data-cookies-aceptar
+            type="button"
+        >
+            Aceptar
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     21. VOLVER ARRIBA
+========================================================= -->
+
+<button
+    id="btnVolverArriba"
+    class="btn-volver-arriba"
+    type="button"
+    aria-label="Volver arriba"
+>
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+<!-- =========================================================
+     22. ESTADO DE CONEXIÓN
+========================================================= -->
+
+<div
+    id="estadoConexion"
+    class="estado-conexion"
+    hidden
+>
+
+    <i class="fa-solid fa-wifi"></i>
+
+    <span>
+        Sin conexión a Internet
+    </span>
+
+</div>
+
+
+
+<!-- =========================================================
+     23. AVISO GENERAL DE MEDICAMENTOS
+========================================================= -->
+
+<div
+    id="avisoMedicamentos"
+    class="aviso-medicamentos"
+>
+
+    <div class="contenedor">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        <p>
+            La disponibilidad y venta de determinados
+            medicamentos puede estar sujeta a receta
+            y normativa aplicable.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     24. SCRIPTS
+
+     IMPORTANTE:
+     PRODUCTOS PRIMERO
+     IMÁGENES DESPUÉS
+     SCRIPT PRINCIPAL AL FINAL
+========================================================= -->
+
+<script src="./productos.js"></script>
+
+<script src="./imagenes1.js"></script>
+
+<script src="./script.js"></script>
+
+
+</body>
+
+</html>
